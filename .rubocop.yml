@@ -1,0 +1,13 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: true
+
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*.rb
+
+Style/Documentation:
+  Enabled: false

@@ -1,5 +1,7 @@
 require:
   - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
 
 AllCops:
   NewCops: enable
@@ -10,6 +12,9 @@ Metrics/BlockLength:
     - config/**/*.rb
 
 Style/Documentation:
+  Enabled: false
+
+Style/IfUnlessModifier:
   Enabled: false
 
 Style/StringLiterals:

@@ -7,9 +7,6 @@ AllCops:
   NewCops: enable
   SuggestExtensions: true
 
-FactoryBot/AssociationStyle:
-  Enabled: false
-
 Layout/BeginEndAlignment:
   Enabled: false
 

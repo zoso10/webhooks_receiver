@@ -7,15 +7,68 @@ AllCops:
   NewCops: enable
   SuggestExtensions: true
 
+FactoryBot/AssociationStyle:
+  Enabled: false
+
+Layout/BeginEndAlignment:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 25
+
 Metrics/BlockLength:
   Exclude:
     - config/**/*.rb
 
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*.rb
+  Max: 25
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
+Rails/ActionOrder:
+  Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/IndexedLet:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpecRails/NegationBeValid:
+  EnforcedStyle: be_invalid
+
 Style/Documentation:
+  Enabled: false
+
+Style/GuardClause:
   Enabled: false
 
 Style/IfUnlessModifier:
   Enabled: false
 
+Style/NegatedIf:
+  Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma

@@ -17,6 +17,9 @@ gem "tailwindcss-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[windows jruby]
 
+# Needed until Ruby 3.3.4 is released https://github.com/ruby/ruby/pull/11006
+gem "net-pop", github: "ruby/net-pop"
+
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
   gem "rspec-rails"
@@ -25,7 +28,9 @@ group :development, :test do
 end
 
 group :development do
+  gem "dockerfile-rails", ">= 1.6"
   gem "rubocop"
   gem "rubocop-rails"
   gem "web-console"
 end
+

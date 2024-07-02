@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class RubygemsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def create
     WebhookRequest
       .create!(source:, body:, headers:, metadata: { name:, version: })

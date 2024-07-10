@@ -33,4 +33,3 @@ group :development do
   gem "rubocop-rails"
   gem "web-console"
 end
-

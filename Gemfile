@@ -22,6 +22,7 @@ gem "net-pop", github: "ruby/net-pop"
 
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
+  gem "dotenv-rails"
   gem "rspec-rails"
   gem "rubocop-rspec"
   gem "rubocop-rspec_rails"

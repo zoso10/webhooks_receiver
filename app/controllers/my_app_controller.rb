@@ -37,10 +37,12 @@ class MyAppController < ApplicationController
   end
 
   def validate_token!
-    request_token = request.headers["WEBHOOK_TOKEN"]
+    request_token = request.headers["WEBHOOK_TOKEN"].to_s
     configured_token = ENV.fetch("WEBHOOK_TOKEN")
+    Rails.logger.info("request token: #{request_token}")
+    Rails.logger.info("configured token: #{configured_token}")
 
-    if request_token.nil? || !ActiveSupport::SecurityUtils.secure_compare(request_token, configured_token)
+    if !ActiveSupport::SecurityUtils.secure_compare(request_token, configured_token)
       head :unauthorized
     end
   end

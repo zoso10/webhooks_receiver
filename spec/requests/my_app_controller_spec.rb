@@ -5,7 +5,7 @@ RSpec.describe MyAppController do
     let(:token) { "secret-token" }
     let(:headers) do
       {
-        WEBHOOK_TOKEN: token,
+        "WEBHOOK-TOKEN": token,
       }
     end
     let(:params) do
